@@ -1,0 +1,108 @@
+.header {
+  background-color: #333;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('H:\kyrsovai\public\фестиваль.jpg') center/cover no-repeat fixed; /* Замени на путь к фоновому изображению */
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 1200px; /* Ширина контейнера, чтобы не было слишком широко на больших экранах */
+  margin: 0 auto; /* Центрируем контейнер по горизонтали */
+  padding: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  margin-right: 10px;
+  border: 1px solid #ccc; /* Добавим рамку для эффекта поля ввода */
+  padding: 5px; /* Добавим небольшой внутренний отступ */
+  border-radius: 4px; /* Добавим закругление углов */
+}
+
+
+.search-bar:focus {
+  outline: none; /* Уберем обводку при фокусе */
+  border-color: #007bff; /* Изменим цвет рамки при фокусе */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Добавим небольшую тень */
+}
+
+
+/* Header.css */
+.logo {
+  flex: 1;
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer; /* Добавим стиль курсора */
+}
+
+
+/* Header.css */
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.header-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff; /* Цвет фона при наведении */
+  color: white; /* Цвет текста */
+  transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
+}
+
+.header-buttons button:hover {
+  background-color: #0056b3; /* Новый цвет фона при наведении */
+}
+
+.greeting-container {
+  text-align: center;
+  padding: 20px;
+  color: rgb(239, 174, 24);
+}
+
+.game-frames-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Распределяем контейнеры равномерно по ширине родителя */
+}
+
+.p{
+  color: rgb(239, 174, 24);
+}
+.game-frame {
+  width: calc(33.33% - 20px); /* Для того, чтобы было 3 в ряд с отступами */
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.game-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* добавим плавные переходы для transform и box-shadow */
+}
+
+.game-frame img:hover {
+  transform: scale(1.1); /* увеличим изображение при наведении */
+}
+
+/* App.css */
+.active {
+  /* стили для активной ссылки, например, подчеркивание или изменение цвета */
+  font-weight: bold;
+}
+
