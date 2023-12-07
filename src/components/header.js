@@ -1,16 +1,21 @@
-import React from 'react';
-import '../App.css'; // Файл для стилей
+import React from "react";
+import "../App.css";
+import { Link, useLocation } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
+  const { location } = props;
   return (
     <div className="header">
       <input type="text" className="search-bar" placeholder="Поиск" />
-      <div className="logo">Gamigos</div>
+      <div className="logo">
+        <Link to="/">ЕБать мой череп</Link>
+      </div>
       <div className="header-buttons">
         <button>Все игры</button>
         <button>Ваш аккаунт</button>
-        <button>О нас</button>
+        <Link to="/about">О нас</Link>
       </div>
+      <div className="current-path">{location.pathname}</div>
     </div>
   );
 };

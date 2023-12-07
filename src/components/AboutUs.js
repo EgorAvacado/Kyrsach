@@ -1,6 +1,7 @@
-import React from 'react';
+import React from "react";
+import { Layout } from "./Layout";
 
-const AboutUsPage = () => {
+const AboutUs = () => {
   return (
     <div>
       <h2>О нас</h2>
@@ -9,4 +10,4 @@ const AboutUsPage = () => {
   );
 };
 
-export default AboutUsPage;
+export default AboutUs;
