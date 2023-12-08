@@ -11,8 +11,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('H:\kyrsovai\public\фестиваль.jpg') center/cover no-repeat fixed; /* Замени на путь к фоновому изображению */
-  font-family: 'Arial', sans-serif;
+  background: url("H:\kyrsovai\public\фестиваль.jpg") center/cover no-repeat
+    fixed; /* Замени на путь к фоновому изображению */
+  font-family: "Arial", sans-serif;
 }
 
 .container {
@@ -29,13 +30,11 @@ body {
   border-radius: 4px; /* Добавим закругление углов */
 }
 
-
 .search-bar:focus {
   outline: none; /* Уберем обводку при фокусе */
   border-color: #007bff; /* Изменим цвет рамки при фокусе */
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Добавим небольшую тень */
 }
-
 
 /* Header.css */
 .logo {
@@ -44,7 +43,6 @@ body {
   font-size: 24px;
   cursor: pointer; /* Добавим стиль курсора */
 }
-
 
 /* Header.css */
 .header-buttons {
@@ -79,14 +77,14 @@ body {
   justify-content: space-between; /* Распределяем контейнеры равномерно по ширине родителя */
 }
 
-.p{
+.p {
   color: rgb(239, 174, 24);
 }
 .game-frame {
   width: calc(33.33% - 20px); /* Для того, чтобы было 3 в ряд с отступами */
   margin-bottom: 20px;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out; 
+  transition: transform 0.3s ease-in-out;
 }
 
 .game-frame img {
@@ -106,3 +104,30 @@ body {
   font-weight: bold;
 }
 
+.li {
+  color: #0056b3;
+}
+
+li {
+  list-style: none; /* Убирает маркеры списка */
+}
+
+li a {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s; /* Добавляет плавные переходы при изменении цвета */
+}
+
+li a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+li a:active {
+  background-color: #ff0000; /* Можете изменить цвет при нажатии на ссылку */
+}

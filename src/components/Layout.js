@@ -15,7 +15,7 @@ export const Layout = (props) => {
 
   return (
     <>
-      <Header location={currentLocation} />
+      {/* <Header location={currentLocation} /> */}
       {props.children}
       <div className="greeting-container">
         <h1>Приветствую, Амигос! Не желаешь сыграть?</h1>

@@ -9,14 +9,18 @@ import { Layout } from "./components/Layout";
 
 const App = () => {
   // Массив с данными об играх
+  const currentLocation = useLocation();
 
   return (
-    <Routes>
-      <Route>
-        <Route path="/" element={<Layout />} />
-        <Route path="/about" element={<AboutUs />} />
-      </Route>
-    </Routes>
+    <>
+      <Header location={currentLocation} />
+      <Routes>
+        <Route>
+          <Route path="/" element={<Layout />} />
+          <Route path="/about" element={<AboutUs />} />
+        </Route>
+      </Routes>
+    </>
   );
 };
 

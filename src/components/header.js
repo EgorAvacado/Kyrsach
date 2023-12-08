@@ -8,14 +8,16 @@ const Header = (props) => {
     <div className="header">
       <input type="text" className="search-bar" placeholder="Поиск" />
       <div className="logo">
-        <Link to="/">ЕБать мой череп</Link>
+        <Link to="/">Gamigos</Link>
       </div>
       <div className="header-buttons">
         <button>Все игры</button>
         <button>Ваш аккаунт</button>
-        <Link to="/about">О нас</Link>
+        <li>
+          <Link to="/about">О нас</Link>
+        </li>
       </div>
-      <div className="current-path">{location.pathname}</div>
+      {/* <div className="current-path">{location.pathname}</div> */}
     </div>
   );
 };
