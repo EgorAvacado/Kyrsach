@@ -4,11 +4,14 @@ import { Link, useLocation } from "react-router-dom";
 
 const Header = (props) => {
   const { location } = props;
+
   return (
     <div className="header">
       <input type="text" className="search-bar" placeholder="Поиск" />
       <div className="logo">
-        <Link to="/">Gamigos</Link>
+        <Link className="Nazvanie" to="/">
+          Gamigos
+        </Link>
       </div>
       <div className="header-buttons">
         <button>Все игры</button>

@@ -11,7 +11,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("H:\kyrsovai\public\фестиваль.jpg") center/cover no-repeat
+  background: url("H:\kyrsovai\public\festivalnew.jpg") center/cover no-repeat
     fixed; /* Замени на путь к фоновому изображению */
   font-family: "Arial", sans-serif;
 }
@@ -130,4 +130,16 @@ li a:hover {
 
 li a:active {
   background-color: #ff0000; /* Можете изменить цвет при нажатии на ссылку */
+}
+
+.Nazvanie {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.Nazvanie:hover {
+  color: #ff0000;
 }

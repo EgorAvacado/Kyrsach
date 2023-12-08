@@ -3,7 +3,7 @@ import Header from "./components/header";
 import AboutUs from "./components/AboutUs";
 import GameFrame from "./components/Gamefreames";
 //import GamePage from './components/gamepage';
-import { Routes, Router, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import { Layout } from "./components/Layout";
 
