@@ -1,11 +1,13 @@
 import React from "react";
 import Header from "./components/header";
 import AboutUs from "./components/AboutUs";
-import GameFrame from "./components/Gamefreames";
+import Voiti from "./components/Voiti";
+//import GameFrame from "./components/Gamefreames";
 //import GamePage from './components/gamepage';
 import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import { Layout } from "./components/Layout";
+import Registration from "./components/Registration";
 
 const App = () => {
   // Массив с данными об играх
@@ -17,6 +19,8 @@ const App = () => {
       <Routes>
         <Route>
           <Route path="/" element={<Layout />} />
+          <Route path="/signin" element={<Voiti />} />
+          <Route path="/signup" element={<Registration />} />
           <Route path="/about" element={<AboutUs />} />
         </Route>
       </Routes>

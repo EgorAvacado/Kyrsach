@@ -68,7 +68,7 @@ body {
 .greeting-container {
   text-align: center;
   padding: 20px;
-  color: rgb(239, 174, 24);
+  color: rgb(255, 255, 255);
 }
 
 .game-frames-container {
@@ -77,8 +77,11 @@ body {
   justify-content: space-between; /* Распределяем контейнеры равномерно по ширине родителя */
 }
 
-.p {
-  color: rgb(239, 174, 24);
+.greeting-container p {
+  text-align: center;
+  color: rgb(241, 240, 236);
+  font-size: 28px;
+  font-family: "Pacifico", cursive;
 }
 .game-frame {
   width: calc(33.33% - 20px); /* Для того, чтобы было 3 в ряд с отступами */
@@ -143,3 +146,173 @@ li a:active {
 .Nazvanie:hover {
   color: #ff0000;
 }
+
+.about-us-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+/*Здесь начинаются все стили с о нас*/
+.section {
+  margin-bottom: 40px;
+}
+
+.top-section {
+  text-align: center;
+  color: rgb(241, 240, 236);
+  font-size: 28px;
+  font-family: "Pacifico", cursive;
+}
+
+.top-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.bottom-section {
+  display: flex;
+  align-items: center;
+}
+
+.left-section {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.left-section img {
+  /*Тут короче картинка с страницы about us*/
+  max-width: 100%;
+  height: auto;
+  border: 4px solid #000000;
+  opacity: 0.8;
+  filter: blur(0.3px) saturate(0.5); /* Пример эффектов фильтра, можете настроить по вашему вкусу */
+}
+
+.right-section {
+  flex: 1;
+}
+
+.right-section h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: rgb(251, 251, 251);
+  font-family: "Pacifico", cursive;
+}
+
+.right-section p {
+  font-size: 21px;
+  color: #f1fff9;
+  font-family: "Pacifico", cursive;
+}
+/*Это всё картинки и текст с главной*/
+.content-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.content-block img {
+  max-width: 40%; /* Уменьшаем ширину картинки */
+  margin-right: 10px;
+  height: auto; /* Поддерживаем пропорции */
+  opacity: 0.8;
+  filter: blur(0.3px) saturate(0.5);
+}
+
+.content-block p {
+  max-width: 55%;
+  font-size: 25px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255);
+  text-align: justify;
+  margin-bottom: 10px;
+  background-color: rgba(90, 68, 177, 0.5);
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.content-block1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.content-block1 img {
+  max-width: 40%; /* Уменьшаем ширину картинки */
+  height: auto; /* Поддерживаем пропорции */
+  margin-left: 40px;
+}
+
+.content-block1 p {
+  max-width: 55%;
+  font-size: 25px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255);
+  text-align: justify;
+  margin-bottom: 10px;
+  background-color: rgba(90, 68, 177, 0.5);
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  order: -1; /* Помещаем текст перед картинкой */
+}
+/*Вся регистрация*/
+.registration-container {
+  max-width: 400px;
+  margin: 100px auto 0;
+  padding: 20px;
+  background-color: rgba(248, 248, 248, 0.5);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #050000;
+}
+
+.registration-container h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 94%;
+  padding: 10px;
+  border: 1px solid #a99494;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #60328e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/*все стили чего-нибудь*/

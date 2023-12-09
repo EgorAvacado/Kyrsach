@@ -1,9 +1,9 @@
 import React from "react";
 import "../App.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
-  const { location } = props;
+  //const { location } = props;
 
   return (
     <div className="header">
@@ -15,8 +15,9 @@ const Header = (props) => {
       </div>
       <div className="header-buttons">
         <button>Все игры</button>
-        <button>Ваш аккаунт</button>
         <li>
+          <Link to="/signin">Sigh in</Link>
+          <Link to="/signup">Sign up</Link>
           <Link to="/about">О нас</Link>
         </li>
       </div>
