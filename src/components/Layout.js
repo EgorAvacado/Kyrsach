@@ -1,12 +1,12 @@
 //import { useLocation } from "react-router-dom";
 import GameFrame from "./Gamefreames";
 const games = [
-  { id: 1, imageUrl: "/costumes1.jpg", altText: "Игра 1" },
-  { id: 2, imageUrl: "/costumes2.jpg", altText: "Игра 2" },
-  { id: 3, imageUrl: "/costumes3.jpg", altText: "Игра 3" },
-  { id: 4, imageUrl: "/costumes4.jpg", altText: "Игра 4" },
-  { id: 5, imageUrl: "/costumes5.jpg", altText: "Игра 5" },
-  { id: 6, imageUrl: "/costumes.jpg", altText: "Игра 6" },
+  { id: 1, imageUrl: "/BF.jpg", altText: "Игра 1" },
+  { id: 2, imageUrl: "/borderlands.jpg", altText: "Игра 2" },
+  { id: 3, imageUrl: "/dota2.png", altText: "Игра 3" },
+  { id: 4, imageUrl: "/diablo.jpg", altText: "Игра 4" },
+  { id: 5, imageUrl: "/CS2.jpg", altText: "Игра 5" },
+  { id: 6, imageUrl: "lol.jpg", altText: "Игра 6" },
 ];
 
 export const Layout = (props) => {
@@ -22,7 +22,7 @@ export const Layout = (props) => {
           <img src="/mix.jpg" alt="Изображение 1" />
           <p>
             Если ты хочешь найти человека, который станет тебе верным
-            компаньёном в новой игре или пройти с кем-нибудь давно забытую
+            компаньоном в новой игре или пройти с кем-нибудь давно забытую
             многими игрулю? Тогда ты попал на правильный сайт, мой друг.
             Буквально в несколько кликов ты сможешь найти себе нового игрового
             товарища и вместе покорить с ним покорить верхушки рейтинга или

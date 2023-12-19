@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/header";
 import AboutUs from "./components/AboutUs";
 import Voiti from "./components/Voiti";
+import YourAccount from "./components/Youraccount";
 //import GameFrame from "./components/Gamefreames";
 //import GamePage from './components/gamepage';
 import { Routes, Route, useLocation } from "react-router-dom";
@@ -20,6 +21,7 @@ const App = () => {
         <Route>
           <Route path="/" element={<Layout />} />
           <Route path="/signin" element={<Voiti />} />
+          <Route path="/youracc" element={<YourAccount />} />
           <Route path="/signup" element={<Registration />} />
           <Route path="/about" element={<AboutUs />} />
         </Route>
