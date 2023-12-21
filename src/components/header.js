@@ -14,7 +14,6 @@ const Header = (props) => {
         </Link>
       </div>
       <div className="header-buttons">
-        <button>Все игры</button>
         <li>
           <Link to="/signin">Sigh in</Link>
           <Link to="/signup">Sign up</Link>

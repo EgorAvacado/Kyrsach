@@ -11,8 +11,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("H:\kyrsovai\public\festivalnew.jpg") center/cover no-repeat
-    fixed; /* Замени на путь к фоновому изображению */
+  background: url("H:\kyrsovai\public\newback.jpg") center/cover no-repeat fixed; /* Замени на путь к фоновому изображению */
   font-family: "Arial", sans-serif;
 }
 
@@ -32,8 +31,8 @@ body {
 
 .search-bar:focus {
   outline: none; /* Уберем обводку при фокусе */
-  border-color: #007bff; /* Изменим цвет рамки при фокусе */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Добавим небольшую тень */
+  border-color: #ff0000; /* Изменим цвет рамки при фокусе */
+  box-shadow: 0 0 5px rgba(171, 3, 3, 0.5); /* Добавим небольшую тень */
 }
 
 /* Header.css */
@@ -45,25 +44,6 @@ body {
 }
 
 /* Header.css */
-.header-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.header-buttons button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #007bff; /* Цвет фона при наведении */
-  color: white; /* Цвет текста */
-  transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
-}
-
-.header-buttons button:hover {
-  background-color: #0056b3; /* Новый цвет фона при наведении */
-}
 
 .greeting-container {
   text-align: center;
@@ -194,8 +174,8 @@ li a:active {
   max-width: 100%;
   height: auto;
   border: 4px solid #000000;
-  opacity: 0.8;
-  filter: blur(0.3px) saturate(0.5); /* Пример эффектов фильтра, можете настроить по вашему вкусу */
+  opacity: 1;
+  filter: blur(0.5px) saturate(0.7);
 }
 
 .right-section {
@@ -238,7 +218,7 @@ li a:active {
   color: rgba(255, 255, 255);
   text-align: justify;
   margin-bottom: 10px;
-  background-color: rgba(90, 68, 177, 0.5);
+  background-color: rgba(177, 68, 68, 0.5);
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -265,7 +245,7 @@ li a:active {
   color: rgba(255, 255, 255);
   text-align: justify;
   margin-bottom: 10px;
-  background-color: rgba(90, 68, 177, 0.5);
+  background-color: rgba(177, 72, 68, 0.5);
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -309,10 +289,73 @@ button[type="submit"] {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #60328e;
+  background-color: #8e3232;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
-/*все стили чего-нибудь*/
+/*все стили вашего аккаунта*/
+.container-acc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.rectangle {
+  width: 80%;
+  height: 80%;
+  background-color: #201f1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  opacity: 0.8;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.header-acc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Уменьшено расстояние до текста */
+  width: 100%;
+}
+
+.avatar-acc {
+  margin-right: 5px; /* Уменьшено расстояние до текста */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar-image-acc {
+  width: 300px;
+  height: 300px;
+}
+
+.user-info-acc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 20px;
+  max-width: 70%;
+  color: white;
+}
+
+.welcome-text-acc {
+  text-align: center;
+  margin-top: 20px; /* Добавлен отступ сверху */
+}
+
+.games-acc {
+  margin-top: 20px;
+  color: white;
+}
+
+.game-list-acc {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}

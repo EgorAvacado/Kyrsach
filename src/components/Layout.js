@@ -19,7 +19,7 @@ export const Layout = (props) => {
       <div className="greeting-container">
         <h1>Приветствую, Амиго! Не желаешь сыграть?</h1>
         <div className="content-block">
-          <img src="/mix.jpg" alt="Изображение 1" />
+          <img src="/coolred.jpeg" alt="Изображение 1" />
           <p>
             Если ты хочешь найти человека, который станет тебе верным
             компаньоном в новой игре или пройти с кем-нибудь давно забытую
