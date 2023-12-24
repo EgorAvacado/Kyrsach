@@ -359,3 +359,73 @@ button[type="submit"] {
   padding: 0;
   text-align: left;
 }
+/*Стили для модального окна*/
+/* Стили для модального окна */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Стили для содержимого модального окна */
+.modal-content {
+  background-color: #5e3b3b;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* Стили для кнопки закрытия */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Стили для списка игр */
+.game-list {
+  list-style: none;
+  padding: 0;
+  color: #ffffff;
+}
+
+/* Стили для кнопки сохранения */
+.save-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #45a049;
+}
+
+.game-buttons {
+  background-color: #ffffff;
+  color: rgb(3, 130, 70);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.selected-games {
+  color: #ffffff;
+}
