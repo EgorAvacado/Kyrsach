@@ -15,7 +15,7 @@ const Header = (props) => {
       </div>
       <div className="header-buttons">
         <li>
-          <Link to="/signin">Sigh in</Link>
+          <Link to="/signin">Log in</Link>
           <Link to="/signup">Sign up</Link>
           <Link to="/about">О нас</Link>
         </li>

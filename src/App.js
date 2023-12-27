@@ -9,7 +9,6 @@ import { Layout } from "./components/Layout";
 import Registration from "./components/Registration";
 
 const App = () => {
-  // Массив с данными об играх
   const currentLocation = useLocation();
 
   return (
@@ -27,5 +26,4 @@ const App = () => {
     </>
   );
 };
-
 export default App;

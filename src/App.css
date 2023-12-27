@@ -11,28 +11,28 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("H:\kyrsovai\public\newback.jpg") center/cover no-repeat fixed; /* Замени на путь к фоновому изображению */
+  background: url("H:\kyrsovai\public\newback.jpg") center/cover no-repeat fixed;
   font-family: "Arial", sans-serif;
 }
 
 .container {
-  max-width: 1200px; /* Ширина контейнера, чтобы не было слишком широко на больших экранах */
-  margin: 0 auto; /* Центрируем контейнер по горизонтали */
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 
 .search-bar {
   flex: 1;
   margin-right: 10px;
-  border: 1px solid #ccc; /* Добавим рамку для эффекта поля ввода */
-  padding: 5px; /* Добавим небольшой внутренний отступ */
-  border-radius: 4px; /* Добавим закругление углов */
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 4px;
 }
 
 .search-bar:focus {
-  outline: none; /* Уберем обводку при фокусе */
-  border-color: #ff0000; /* Изменим цвет рамки при фокусе */
-  box-shadow: 0 0 5px rgba(171, 3, 3, 0.5); /* Добавим небольшую тень */
+  outline: none;
+  border-color: #ff0000;
+  box-shadow: 0 0 5px rgba(171, 3, 3, 0.5);
 }
 
 /* Header.css */
@@ -40,10 +40,8 @@ body {
   flex: 1;
   text-align: center;
   font-size: 24px;
-  cursor: pointer; /* Добавим стиль курсора */
+  cursor: pointer;
 }
-
-/* Header.css */
 
 .greeting-container {
   text-align: center;
@@ -54,7 +52,7 @@ body {
 .game-frames-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Распределяем контейнеры равномерно по ширине родителя */
+  justify-content: space-between;
 }
 
 .greeting-container p {
@@ -64,7 +62,7 @@ body {
   font-family: "Pacifico", cursive;
 }
 .game-frame {
-  width: calc(33.33% - 20px); /* Для того, чтобы было 3 в ряд с отступами */
+  width: calc(33.33% - 20px);
   margin-bottom: 20px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
@@ -74,16 +72,15 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* добавим плавные переходы для transform и box-shadow */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .game-frame img:hover {
-  transform: scale(1.1); /* увеличим изображение при наведении */
+  transform: scale(1.1);
 }
 
 /* App.css */
 .active {
-  /* стили для активной ссылки, например, подчеркивание или изменение цвета */
   font-weight: bold;
 }
 
@@ -452,32 +449,63 @@ button[type="submit"] {
   object-fit: cover;
 }
 .game-item p {
-  position: absolute; /* Абсолютное позиционирование */
-  bottom: 0; /* Расположение текста снизу блока */
-  width: 100%; /* Ширина текста равна ширине блока */
-  padding: 5px; /* Отступы для текста */
-  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
-  color: white; /* Цвет текста */
-  text-align: center; /* Выравнивание текста по центру */
-  box-sizing: border-box; /* Размеры блока включают padding */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
 }
 .game-item button {
   position: absolute;
-  bottom: 5px; /* Расположение кнопки "Удалить" относительно нижней части элемента */
-  left: 50%; /* Положение кнопки "Удалить" по горизонтали */
-  transform: translateX(
-    -50%
-  ); /* Центрирование кнопки "Удалить" по горизонтали */
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 8px 16px;
-  background-color: red; /* Цвет фона кнопки */
-  color: white; /* Цвет текста кнопки */
+  background-color: red;
+  color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  opacity: 0; /* Для скрытия кнопки до наведения */
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .game-item:hover button {
   opacity: 1;
+}
+
+.players-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.players-modal-content {
+  background-color: #714646;
+  color: #fff; /* Белый цвет текста */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #000; /* Черный цвет крестика закрытия */
 }

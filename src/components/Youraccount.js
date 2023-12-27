@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "../App.css"; // Путь к вашему файлу со стилями
+import "../App.css";
 
 const YourAccount = () => {
-  const defaultAvatarImage = "/friends.jpg"; // Ссылка на картинку по умолчанию
+  const defaultAvatarImage = "/ava.png"; // Ссылка на картинку по умолчанию
   const [gamesList, setGamesList] = useState([]);
   const [selectedGames, setSelectedGames] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedGamesDisplay, setSelectedGamesDisplay] = useState([]);
+  const [gameInfo, setGameInfo] = useState(null);
+  const [playersInfo, setPlayersInfo] = useState([]);
+  const [showPlayersModal, setShowPlayersModal] = useState(false);
 
   useEffect(() => {
     const fetchGames = async () => {
@@ -38,6 +41,24 @@ const YourAccount = () => {
       setSelectedGamesDisplay(updatedGamesList);
     } catch (error) {
       console.error("Error removing game from user", error);
+    }
+  };
+
+  const handleShowGameInfo = async (gameId) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:3001/api/games/users",
+        {
+          gameId: gameId,
+        }
+      );
+
+      const { game, players } = response.data;
+      setGameInfo(game);
+      setPlayersInfo(players);
+      setShowPlayersModal(true);
+    } catch (error) {
+      console.error("Error fetching game and players", error);
     }
   };
 
@@ -90,7 +111,7 @@ const YourAccount = () => {
             />
           </div>
           <div className="user-info-acc">
-            <h1 className="welcome-text-acc">Welcome, Акула!</h1>
+            <h1 className="welcome-text-acc">Welcome, User!</h1>
             <p>Место для информации о пользователе</p>
           </div>
         </div>
@@ -136,14 +157,42 @@ const YourAccount = () => {
                 <div className="game-item" key={game.id}>
                   <img src={game.picture} alt={game.title} />
                   <p>{game.title}</p>
-                  <button onClick={() => handleRemoveGame(game.id)}>
-                    Удалить игру
+
+                  <button onClick={() => handleShowGameInfo(game.id)}>
+                    Информация об игре
                   </button>
                 </div>
               ))}
             </div>
           ))}
         </div>
+        {showPlayersModal && (
+          <div className="players-modal">
+            <div className="players-modal-content">
+              <span
+                className="close"
+                onClick={() => setShowPlayersModal(false)}
+              >
+                &times;
+              </span>
+              {gameInfo && (
+                <div>
+                  <h3>{gameInfo.title}</h3>
+                  <p>{gameInfo.description}</p>
+                  <ul>
+                    {playersInfo.map((users) => (
+                      <li key={users.id}>
+                        <p>Ник: {users.nickname}</p>
+                        <p>Дискорд: {users.discord}</p>
+                        <p>Описание: {users.personality}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
