@@ -304,8 +304,8 @@ button[type="submit"] {
 }
 
 .rectangle {
-  width: 80%;
-  height: 80%;
+  width: 85%;
+  height: 90%;
   background-color: #201f1f;
   display: flex;
   flex-direction: column;
@@ -426,6 +426,58 @@ button[type="submit"] {
   cursor: pointer;
   font-size: 16px;
 }
+
 .selected-games {
-  color: #ffffff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-row {
+  display: flex;
+  gap: 10px;
+}
+
+.game-item {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.game-item p {
+  position: absolute; /* Абсолютное позиционирование */
+  bottom: 0; /* Расположение текста снизу блока */
+  width: 100%; /* Ширина текста равна ширине блока */
+  padding: 5px; /* Отступы для текста */
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
+  color: white; /* Цвет текста */
+  text-align: center; /* Выравнивание текста по центру */
+  box-sizing: border-box; /* Размеры блока включают padding */
+}
+.game-item button {
+  position: absolute;
+  bottom: 5px; /* Расположение кнопки "Удалить" относительно нижней части элемента */
+  left: 50%; /* Положение кнопки "Удалить" по горизонтали */
+  transform: translateX(
+    -50%
+  ); /* Центрирование кнопки "Удалить" по горизонтали */
+  padding: 8px 16px;
+  background-color: red; /* Цвет фона кнопки */
+  color: white; /* Цвет текста кнопки */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0; /* Для скрытия кнопки до наведения */
+  transition: opacity 0.3s ease;
+}
+
+.game-item:hover button {
+  opacity: 1;
 }

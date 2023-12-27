@@ -25,6 +25,22 @@ const YourAccount = () => {
     setShowModal(true);
   };
 
+  const handleRemoveGame = async (gameId) => {
+    try {
+      await axios.post("http://localhost:3001/api/user/games/remove", {
+        userId: "1",
+        gameId: gameId,
+      });
+
+      const updatedGamesList = selectedGamesDisplay.filter(
+        (game) => game.id !== gameId
+      );
+      setSelectedGamesDisplay(updatedGamesList);
+    } catch (error) {
+      console.error("Error removing game from user", error);
+    }
+  };
+
   const handleGameSelection = (gameId) => {
     const isSelected = selectedGames.includes(gameId);
     if (isSelected) {
@@ -33,7 +49,8 @@ const YourAccount = () => {
       setSelectedGames([...selectedGames, gameId]);
     }
   };
-
+  const gamesPerRow = 6; // количество игр в одном ряду
+  const groupedGames = chunkArray(selectedGamesDisplay, gamesPerRow);
   const handleSaveGames = async () => {
     try {
       await axios.post("http://localhost:3001/api/user/games/add", {
@@ -44,7 +61,7 @@ const YourAccount = () => {
       const updatedSelectedGames = gamesList.filter((game) =>
         selectedGames.includes(game.id)
       );
-      console.log(updatedSelectedGames); // Добавьте эту строку для проверки данных
+      console.log(updatedSelectedGames);
       setSelectedGamesDisplay(updatedSelectedGames);
 
       setShowModal(false);
@@ -52,6 +69,14 @@ const YourAccount = () => {
       console.error("Error saving games to user", error);
     }
   };
+
+  function chunkArray(arr, size) {
+    const chunkedArr = [];
+    for (let i = 0; i < arr.length; i += size) {
+      chunkedArr.push(arr.slice(i, i + size));
+    }
+    return chunkedArr;
+  }
 
   return (
     <div className="container-acc">
@@ -66,20 +91,7 @@ const YourAccount = () => {
           </div>
           <div className="user-info-acc">
             <h1 className="welcome-text-acc">Welcome, Акула!</h1>
-            <p>
-              Привет, я Разрушитель! Я страстный геймер и любитель видеоигр. Мои
-              пальцы ловко управляют геймпадом или клавиатурой, а мои глаза
-              всегда сосредоточены на экране, где разворачиваются невероятные
-              приключения и сражения. Я пристрастился к широкому спектру игровых
-              жанров, от захватывающих экшенов и ролевых игр до интригующих
-              головоломок и соревновательных многопользовательских сражений.
-              Виртуальные миры стали моим вторым домом, а игровые персонажи -
-              верными спутниками. Когда я вступаю в игровой мир, я
-              сосредотачиваюсь на достижении высоких результатов и постоянном
-              развитии своего навыка игры. Я стремлюсь к тому, чтобы стать
-              лучшим в своей команде или соревновании и покорить самые сложные
-              испытания, с которыми сталкиваются геймеры.
-            </p>
+            <p>Место для информации о пользователе</p>
           </div>
         </div>
         <div className="games-acc">
@@ -103,6 +115,7 @@ const YourAccount = () => {
                           onChange={() => handleGameSelection(game.id)}
                           checked={selectedGames.includes(game.id)}
                         />
+
                         {game.title}
                       </label>
                     </li>
@@ -115,13 +128,21 @@ const YourAccount = () => {
             </div>
           )}
         </div>
+
         <div className="selected-games">
-          <h3>Выбранные игры:</h3>
-          <ul>
-            {selectedGamesDisplay.map((game) => (
-              <li key={game.id}>{game.title}</li>
-            ))}
-          </ul>
+          {groupedGames.map((row, index) => (
+            <div className="game-row" key={index}>
+              {row.map((game) => (
+                <div className="game-item" key={game.id}>
+                  <img src={game.picture} alt={game.title} />
+                  <p>{game.title}</p>
+                  <button onClick={() => handleRemoveGame(game.id)}>
+                    Удалить игру
+                  </button>
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </div>

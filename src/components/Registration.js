@@ -12,7 +12,7 @@ const Registration = () => {
   });
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Предотвратить перезагрузку страницы по умолчанию
+    event.preventDefault();
     const { nickname, password, discord } = formData;
 
     if (!nickname || !password || !discord) {

@@ -3,8 +3,6 @@ import Header from "./components/header";
 import AboutUs from "./components/AboutUs";
 import Voiti from "./components/Voiti";
 import YourAccount from "./components/Youraccount";
-//import GameFrame from "./components/Gamefreames";
-//import GamePage from './components/gamepage';
 import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import { Layout } from "./components/Layout";
