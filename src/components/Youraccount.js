@@ -161,6 +161,12 @@ const YourAccount = () => {
                   <button onClick={() => handleShowGameInfo(game.id)}>
                     Информация об игре
                   </button>
+                  <button
+                    className="delete-button"
+                    onClick={() => handleRemoveGame(game.id)}
+                  >
+                    &#10006;
+                  </button>
                 </div>
               ))}
             </div>
